@@ -1,0 +1,982 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXApplicationTarget section */
+		29B97326FDCFA39411CA2CEA /* Maelstrom */ = {
+			isa = PBXApplicationTarget;
+			buildConfigurationList = 042E4A750D7B17DB008E6CEB /* Build configuration list for PBXApplicationTarget "Maelstrom" */;
+			buildPhases = (
+				29B97327FDCFA39411CA2CEA /* Headers */,
+				29B97328FDCFA39411CA2CEA /* Resources */,
+				29B9732BFDCFA39411CA2CEA /* Sources */,
+				29B9732DFDCFA39411CA2CEA /* Frameworks */,
+				043355C9FE30361CC02AAC07 /* Rez */,
+				F52890EE00C16E5C01000001 /* ShellScript */,
+			);
+			dependencies = (
+				F52890F200C1A31301000001 /* PBXTargetDependency */,
+			);
+			name = Maelstrom;
+			productInstallPath = "$(HOME)/Applications";
+			productName = "SDL Application";
+			productReference = 17587328FF379C6511CA2CBB /* Maelstrom.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Maelstrom</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Maelstrom 3.0.6</string>
+	<key>CFBundleIconFile</key>
+	<string>Maelstrom.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>Maelstrom</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Maelstrom</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>3.0.6</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>3.0.6</string>
+	<key>NSMainNibFile</key>
+	<string>SDLMain.nib</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+		};
+/* End PBXApplicationTarget section */
+
+/* Begin PBXBuildFile section */
+		00F8BA58010A53097F000001 /* objects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00F8BA57010A53097F000001 /* objects.cpp */; };
+		00F9DA5000AC72F57F000001 /* SDLMain.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F9DA4F00AC72F57F000001 /* SDLMain.h */; };
+		00F9DA5200AC730E7F000001 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F9DA5100AC730E7F000001 /* SDLMain.m */; };
+		00F9DA5500AC763A7F000001 /* SDLMain.nib in Resources */ = {isa = PBXBuildFile; fileRef = 00F9DA5400AC763A7F000001 /* SDLMain.nib */; };
+		00FF5C5B00B0464B7F000001 /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FF5C4D00B0464B7F000001 /* globals.h */; };
+		00FF5C5C00B0464B7F000001 /* make.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FF5C5000B0464B7F000001 /* make.h */; };
+		00FF5C5D00B0464B7F000001 /* netlogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FF5C5100B0464B7F000001 /* netlogic.h */; };
+		00FF5C5E00B0464B7F000001 /* netplay.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FF5C5300B0464B7F000001 /* netplay.h */; };
+		00FF5C5F00B0464B7F000001 /* object.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FF5C5500B0464B7F000001 /* object.h */; };
+		00FF5C6000B0464B7F000001 /* objects.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FF5C5600B0464B7F000001 /* objects.h */; };
+		00FF5C6100B0464B7F000001 /* player.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FF5C5800B0464B7F000001 /* player.h */; };
+		00FF5C6200B0464B7F000001 /* protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FF5C5900B0464B7F000001 /* protocol.h */; };
+		00FF5C6300B0464B7F000001 /* shinobi.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FF5C5A00B0464B7F000001 /* shinobi.h */; };
+		00FF5C6400B0464B7F000001 /* about.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00FF5C4A00B0464B7F000001 /* about.cpp */; };
+		00FF5C6500B0464B7F000001 /* blit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00FF5C4B00B0464B7F000001 /* blit.cpp */; };
+		00FF5C6600B0464B7F000001 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00FF5C4C00B0464B7F000001 /* game.cpp */; };
+		00FF5C6700B0464B7F000001 /* logic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00FF5C4E00B0464B7F000001 /* logic.cpp */; };
+		00FF5C6800B0464B7F000001 /* make.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00FF5C4F00B0464B7F000001 /* make.cpp */; };
+		00FF5C6900B0464B7F000001 /* netplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00FF5C5200B0464B7F000001 /* netplay.cpp */; };
+		00FF5C6A00B0464B7F000001 /* object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00FF5C5400B0464B7F000001 /* object.cpp */; };
+		00FF5C6B00B0464B7F000001 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00FF5C5700B0464B7F000001 /* player.cpp */; };
+		00FF5C6C00B0464B7F000001 /* protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FF5C5900B0464B7F000001 /* protocol.h */; };
+		0104628900B326437F000001 /* netscore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0104628800B326437F000001 /* netscore.cpp */; };
+		041594620D7B1F86006B25AD /* icon.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 041594610D7B1F86006B25AD /* icon.bmp */; };
+		042E4A880D7B1913008E6CEB /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042E4A870D7B1913008E6CEB /* SDL.framework */; };
+		042E4A8C0D7B191E008E6CEB /* SDL_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042E4A8B0D7B191E008E6CEB /* SDL_mixer.framework */; };
+		042E4A900D7B192E008E6CEB /* SDL_net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042E4A8F0D7B192E008E6CEB /* SDL_net.framework */; };
+		042E4A980D7B19D5008E6CEB /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042E4A970D7B19D5008E6CEB /* AudioUnit.framework */; };
+		049E9F780D7B20DA001F3564 /* Maelstrom_Icon#100.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F5E0D7B20DA001F3564 /* Maelstrom_Icon#100.cicn */; };
+		049E9F790D7B20DA001F3564 /* Maelstrom_Icon#101.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F5F0D7B20DA001F3564 /* Maelstrom_Icon#101.cicn */; };
+		049E9F7A0D7B20DA001F3564 /* Maelstrom_Icon#102.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F600D7B20DA001F3564 /* Maelstrom_Icon#102.cicn */; };
+		049E9F7B0D7B20DA001F3564 /* Maelstrom_Icon#103.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F610D7B20DA001F3564 /* Maelstrom_Icon#103.cicn */; };
+		049E9F7C0D7B20DA001F3564 /* Maelstrom_Icon#104.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F620D7B20DA001F3564 /* Maelstrom_Icon#104.cicn */; };
+		049E9F7D0D7B20DA001F3564 /* Maelstrom_Icon#110.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F630D7B20DA001F3564 /* Maelstrom_Icon#110.cicn */; };
+		049E9F7E0D7B20DA001F3564 /* Maelstrom_Icon#128.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F640D7B20DA001F3564 /* Maelstrom_Icon#128.cicn */; };
+		049E9F7F0D7B20DA001F3564 /* Maelstrom_Icon#129.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F650D7B20DA001F3564 /* Maelstrom_Icon#129.cicn */; };
+		049E9F800D7B20DA001F3564 /* Maelstrom_Icon#130.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F660D7B20DA001F3564 /* Maelstrom_Icon#130.cicn */; };
+		049E9F810D7B20DA001F3564 /* Maelstrom_Icon#131.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F670D7B20DA001F3564 /* Maelstrom_Icon#131.cicn */; };
+		049E9F820D7B20DA001F3564 /* Maelstrom_Icon#132.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F680D7B20DA001F3564 /* Maelstrom_Icon#132.cicn */; };
+		049E9F830D7B20DA001F3564 /* Maelstrom_Icon#133.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F690D7B20DA001F3564 /* Maelstrom_Icon#133.cicn */; };
+		049E9F840D7B20DA001F3564 /* Maelstrom_Icon#134.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F6A0D7B20DA001F3564 /* Maelstrom_Icon#134.cicn */; };
+		049E9F850D7B20DA001F3564 /* Maelstrom_Icon#135.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F6B0D7B20DA001F3564 /* Maelstrom_Icon#135.cicn */; };
+		049E9F860D7B20DA001F3564 /* Maelstrom_Icon#136.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F6C0D7B20DA001F3564 /* Maelstrom_Icon#136.cicn */; };
+		049E9F870D7B20DA001F3564 /* Maelstrom_Icon#137.cicn in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F6D0D7B20DA001F3564 /* Maelstrom_Icon#137.cicn */; };
+		049E9F880D7B20DA001F3564 /* Maelstrom_Titles#100.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F6E0D7B20DA001F3564 /* Maelstrom_Titles#100.bmp */; };
+		049E9F890D7B20DA001F3564 /* Maelstrom_Titles#101.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F6F0D7B20DA001F3564 /* Maelstrom_Titles#101.bmp */; };
+		049E9F8A0D7B20DA001F3564 /* Maelstrom_Titles#102.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F700D7B20DA001F3564 /* Maelstrom_Titles#102.bmp */; };
+		049E9F8B0D7B20DA001F3564 /* Maelstrom_Titles#128.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F710D7B20DA001F3564 /* Maelstrom_Titles#128.bmp */; };
+		049E9F8C0D7B20DA001F3564 /* Maelstrom_Titles#129.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F720D7B20DA001F3564 /* Maelstrom_Titles#129.bmp */; };
+		049E9F8D0D7B20DA001F3564 /* Maelstrom_Titles#130.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F730D7B20DA001F3564 /* Maelstrom_Titles#130.bmp */; };
+		049E9F8E0D7B20DA001F3564 /* Maelstrom_Titles#133.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F740D7B20DA001F3564 /* Maelstrom_Titles#133.bmp */; };
+		049E9F8F0D7B20DA001F3564 /* Maelstrom_Titles#134.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F750D7B20DA001F3564 /* Maelstrom_Titles#134.bmp */; };
+		049E9F900D7B20DA001F3564 /* Maelstrom_Titles#135.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F760D7B20DA001F3564 /* Maelstrom_Titles#135.bmp */; };
+		049E9F910D7B20DA001F3564 /* Maelstrom_Titles#999.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 049E9F770D7B20DA001F3564 /* Maelstrom_Titles#999.bmp */; };
+		04E1EF980D7B1ED000B4C82A /* Maelstrom-Scores in Resources */ = {isa = PBXBuildFile; fileRef = 04E1EF940D7B1ED000B4C82A /* Maelstrom-Scores */; };
+		04E1EF990D7B1ED000B4C82A /* Maelstrom_Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 04E1EF950D7B1ED000B4C82A /* Maelstrom_Fonts */; };
+		04E1EF9A0D7B1ED000B4C82A /* Maelstrom_Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 04E1EF960D7B1ED000B4C82A /* Maelstrom_Sounds */; };
+		04E1EF9B0D7B1ED000B4C82A /* Maelstrom_Sprites in Resources */ = {isa = PBXBuildFile; fileRef = 04E1EF970D7B1ED000B4C82A /* Maelstrom_Sprites */; };
+		089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		173670C300AF295B7F000001 /* buttonlist.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670BB00AF295B7F000001 /* buttonlist.h */; };
+		173670C400AF295B7F000001 /* checksum.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670BD00AF295B7F000001 /* checksum.h */; };
+		173670C500AF295B7F000001 /* colortable.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670BE00AF295B7F000001 /* colortable.h */; };
+		173670C600AF295B7F000001 /* controls.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670C000AF295B7F000001 /* controls.h */; };
+		173670C700AF295B7F000001 /* dialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670C200AF295B7F000001 /* dialog.h */; };
+		173670C800AF295B7F000001 /* checksum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 173670BC00AF295B7F000001 /* checksum.cpp */; };
+		173670C900AF295B7F000001 /* controls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 173670BF00AF295B7F000001 /* controls.cpp */; };
+		173670CA00AF295B7F000001 /* dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 173670C100AF295B7F000001 /* dialog.cpp */; };
+		173670DC00AF29927F000001 /* fastrand.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670CC00AF29927F000001 /* fastrand.h */; };
+		173670DD00AF29927F000001 /* load.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670CF00AF29927F000001 /* load.h */; };
+		173670DE00AF29927F000001 /* logic.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670D000AF29927F000001 /* logic.h */; };
+		173670DF00AF29927F000001 /* Maelstrom_Globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670D100AF29927F000001 /* Maelstrom_Globals.h */; };
+		173670E000AF29927F000001 /* Maelstrom.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670D300AF29927F000001 /* Maelstrom.h */; };
+		173670E100AF29927F000001 /* myerror.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670D600AF29927F000001 /* myerror.h */; };
+		173670E200AF29927F000001 /* public_key.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670D700AF29927F000001 /* public_key.h */; };
+		173670E300AF29927F000001 /* rect.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670D900AF29927F000001 /* rect.h */; };
+		173670E400AF29927F000001 /* scores.h in Headers */ = {isa = PBXBuildFile; fileRef = 173670DB00AF29927F000001 /* scores.h */; };
+		173670E500AF29927F000001 /* fastrand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 173670CB00AF29927F000001 /* fastrand.cpp */; };
+		173670E600AF29927F000001 /* init.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 173670CD00AF29927F000001 /* init.cpp */; };
+		173670E700AF29927F000001 /* load.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 173670CE00AF29927F000001 /* load.cpp */; };
+		173670E900AF29927F000001 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 173670D400AF29927F000001 /* main.cpp */; };
+		173670EA00AF29927F000001 /* myerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 173670D500AF29927F000001 /* myerror.cpp */; };
+		173670EB00AF29927F000001 /* rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 173670D800AF29927F000001 /* rect.cpp */; };
+		173670EC00AF29927F000001 /* scores.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 173670DA00AF29927F000001 /* scores.cpp */; };
+		1736710D00AF2A6D7F000001 /* pixel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1736710900AF2A6D7F000001 /* pixel.h */; };
+		1736710E00AF2A6D7F000001 /* SDL_FrameBuf.h in Headers */ = {isa = PBXBuildFile; fileRef = 1736710C00AF2A6D7F000001 /* SDL_FrameBuf.h */; };
+		1736711300AF2A6D7F000001 /* pixel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1736710800AF2A6D7F000001 /* pixel.cpp */; };
+		1736711400AF2A6D7F000001 /* SDL_FrameBuf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1736710B00AF2A6D7F000001 /* SDL_FrameBuf.cpp */; };
+		1736712A00AF2C7D7F000001 /* applefile.h in Headers */ = {isa = PBXBuildFile; fileRef = 1736711800AF2C7D7F000001 /* applefile.h */; };
+		1736712B00AF2C7D7F000001 /* bitesex.h in Headers */ = {isa = PBXBuildFile; fileRef = 1736711900AF2C7D7F000001 /* bitesex.h */; };
+		1736712C00AF2C7D7F000001 /* Mac_Compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 1736711B00AF2C7D7F000001 /* Mac_Compat.h */; };
+		1736712D00AF2C7D7F000001 /* Mac_FontServ.h in Headers */ = {isa = PBXBuildFile; fileRef = 1736711D00AF2C7D7F000001 /* Mac_FontServ.h */; };
+		1736712E00AF2C7D7F000001 /* Mac_Resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 1736711F00AF2C7D7F000001 /* Mac_Resource.h */; };
+		1736712F00AF2C7D7F000001 /* Mac_Sound.h in Headers */ = {isa = PBXBuildFile; fileRef = 1736712100AF2C7D7F000001 /* Mac_Sound.h */; };
+		1736713000AF2C7D7F000001 /* Mac_Wave.h in Headers */ = {isa = PBXBuildFile; fileRef = 1736712300AF2C7D7F000001 /* Mac_Wave.h */; };
+		1736713500AF2C7D7F000001 /* Mac_FontServ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1736711C00AF2C7D7F000001 /* Mac_FontServ.cpp */; };
+		1736713600AF2C7D7F000001 /* Mac_Resource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1736711E00AF2C7D7F000001 /* Mac_Resource.cpp */; };
+		1736713700AF2C7D7F000001 /* Mac_Sound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1736712000AF2C7D7F000001 /* Mac_Sound.cpp */; };
+		1736713800AF2C7D7F000001 /* Mac_Wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1736712200AF2C7D7F000001 /* Mac_Wave.cpp */; };
+		1736716E00B03F027F000001 /* Maelstrom-netd.c in Sources */ = {isa = PBXBuildFile; fileRef = 1736716C00B03F027F000001 /* Maelstrom-netd.c */; };
+		F5709023010A768101000001 /* Maelstrom.icns in Resources */ = {isa = PBXBuildFile; fileRef = F5709022010A768101000001 /* Maelstrom.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		042E4A610D7B17D8008E6CEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1736716600B03D367F000001;
+			remoteInfo = "Maelstrom Server";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00F8BA57010A53097F000001 /* objects.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = objects.cpp; sourceTree = "<group>"; };
+		00F9DA4F00AC72F57F000001 /* SDLMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = SOURCE_ROOT; };
+		00F9DA5100AC730E7F000001 /* SDLMain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = SOURCE_ROOT; };
+		00F9DA5400AC763A7F000001 /* SDLMain.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = SDLMain.nib; sourceTree = SOURCE_ROOT; };
+		00FF5C4A00B0464B7F000001 /* about.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = about.cpp; sourceTree = "<group>"; };
+		00FF5C4B00B0464B7F000001 /* blit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = blit.cpp; sourceTree = "<group>"; };
+		00FF5C4C00B0464B7F000001 /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		00FF5C4D00B0464B7F000001 /* globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
+		00FF5C4E00B0464B7F000001 /* logic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = logic.cpp; sourceTree = "<group>"; };
+		00FF5C4F00B0464B7F000001 /* make.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = make.cpp; sourceTree = "<group>"; };
+		00FF5C5000B0464B7F000001 /* make.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = make.h; sourceTree = "<group>"; };
+		00FF5C5100B0464B7F000001 /* netlogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = netlogic.h; sourceTree = "<group>"; };
+		00FF5C5200B0464B7F000001 /* netplay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = netplay.cpp; sourceTree = "<group>"; };
+		00FF5C5300B0464B7F000001 /* netplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = netplay.h; sourceTree = "<group>"; };
+		00FF5C5400B0464B7F000001 /* object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = object.cpp; sourceTree = "<group>"; };
+		00FF5C5500B0464B7F000001 /* object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = object.h; sourceTree = "<group>"; };
+		00FF5C5600B0464B7F000001 /* objects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objects.h; sourceTree = "<group>"; };
+		00FF5C5700B0464B7F000001 /* player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
+		00FF5C5800B0464B7F000001 /* player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
+		00FF5C5900B0464B7F000001 /* protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = protocol.h; sourceTree = "<group>"; };
+		00FF5C5A00B0464B7F000001 /* shinobi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shinobi.h; sourceTree = "<group>"; };
+		0104628800B326437F000001 /* netscore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = netscore.cpp; path = ../netscore.cpp; sourceTree = SOURCE_ROOT; };
+		041594610D7B1F86006B25AD /* icon.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = icon.bmp; path = ../icon.bmp; sourceTree = SOURCE_ROOT; };
+		042E4A870D7B1913008E6CEB /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = ../../Library/Frameworks/SDL.framework; sourceTree = SOURCE_ROOT; };
+		042E4A8B0D7B191E008E6CEB /* SDL_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_mixer.framework; path = ../../Library/Frameworks/SDL_mixer.framework; sourceTree = SOURCE_ROOT; };
+		042E4A8F0D7B192E008E6CEB /* SDL_net.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_net.framework; path = ../../Library/Frameworks/SDL_net.framework; sourceTree = SOURCE_ROOT; };
+		042E4A970D7B19D5008E6CEB /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
+		049E9F5E0D7B20DA001F3564 /* Maelstrom_Icon#100.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#100.cicn"; path = "../Images/Maelstrom_Icon#100.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F5F0D7B20DA001F3564 /* Maelstrom_Icon#101.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#101.cicn"; path = "../Images/Maelstrom_Icon#101.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F600D7B20DA001F3564 /* Maelstrom_Icon#102.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#102.cicn"; path = "../Images/Maelstrom_Icon#102.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F610D7B20DA001F3564 /* Maelstrom_Icon#103.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#103.cicn"; path = "../Images/Maelstrom_Icon#103.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F620D7B20DA001F3564 /* Maelstrom_Icon#104.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#104.cicn"; path = "../Images/Maelstrom_Icon#104.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F630D7B20DA001F3564 /* Maelstrom_Icon#110.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#110.cicn"; path = "../Images/Maelstrom_Icon#110.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F640D7B20DA001F3564 /* Maelstrom_Icon#128.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#128.cicn"; path = "../Images/Maelstrom_Icon#128.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F650D7B20DA001F3564 /* Maelstrom_Icon#129.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#129.cicn"; path = "../Images/Maelstrom_Icon#129.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F660D7B20DA001F3564 /* Maelstrom_Icon#130.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#130.cicn"; path = "../Images/Maelstrom_Icon#130.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F670D7B20DA001F3564 /* Maelstrom_Icon#131.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#131.cicn"; path = "../Images/Maelstrom_Icon#131.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F680D7B20DA001F3564 /* Maelstrom_Icon#132.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#132.cicn"; path = "../Images/Maelstrom_Icon#132.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F690D7B20DA001F3564 /* Maelstrom_Icon#133.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#133.cicn"; path = "../Images/Maelstrom_Icon#133.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F6A0D7B20DA001F3564 /* Maelstrom_Icon#134.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#134.cicn"; path = "../Images/Maelstrom_Icon#134.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F6B0D7B20DA001F3564 /* Maelstrom_Icon#135.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#135.cicn"; path = "../Images/Maelstrom_Icon#135.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F6C0D7B20DA001F3564 /* Maelstrom_Icon#136.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#136.cicn"; path = "../Images/Maelstrom_Icon#136.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F6D0D7B20DA001F3564 /* Maelstrom_Icon#137.cicn */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom_Icon#137.cicn"; path = "../Images/Maelstrom_Icon#137.cicn"; sourceTree = SOURCE_ROOT; };
+		049E9F6E0D7B20DA001F3564 /* Maelstrom_Titles#100.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = "Maelstrom_Titles#100.bmp"; path = "../Images/Maelstrom_Titles#100.bmp"; sourceTree = SOURCE_ROOT; };
+		049E9F6F0D7B20DA001F3564 /* Maelstrom_Titles#101.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = "Maelstrom_Titles#101.bmp"; path = "../Images/Maelstrom_Titles#101.bmp"; sourceTree = SOURCE_ROOT; };
+		049E9F700D7B20DA001F3564 /* Maelstrom_Titles#102.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = "Maelstrom_Titles#102.bmp"; path = "../Images/Maelstrom_Titles#102.bmp"; sourceTree = SOURCE_ROOT; };
+		049E9F710D7B20DA001F3564 /* Maelstrom_Titles#128.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = "Maelstrom_Titles#128.bmp"; path = "../Images/Maelstrom_Titles#128.bmp"; sourceTree = SOURCE_ROOT; };
+		049E9F720D7B20DA001F3564 /* Maelstrom_Titles#129.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = "Maelstrom_Titles#129.bmp"; path = "../Images/Maelstrom_Titles#129.bmp"; sourceTree = SOURCE_ROOT; };
+		049E9F730D7B20DA001F3564 /* Maelstrom_Titles#130.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = "Maelstrom_Titles#130.bmp"; path = "../Images/Maelstrom_Titles#130.bmp"; sourceTree = SOURCE_ROOT; };
+		049E9F740D7B20DA001F3564 /* Maelstrom_Titles#133.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = "Maelstrom_Titles#133.bmp"; path = "../Images/Maelstrom_Titles#133.bmp"; sourceTree = SOURCE_ROOT; };
+		049E9F750D7B20DA001F3564 /* Maelstrom_Titles#134.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = "Maelstrom_Titles#134.bmp"; path = "../Images/Maelstrom_Titles#134.bmp"; sourceTree = SOURCE_ROOT; };
+		049E9F760D7B20DA001F3564 /* Maelstrom_Titles#135.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = "Maelstrom_Titles#135.bmp"; path = "../Images/Maelstrom_Titles#135.bmp"; sourceTree = SOURCE_ROOT; };
+		049E9F770D7B20DA001F3564 /* Maelstrom_Titles#999.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = "Maelstrom_Titles#999.bmp"; path = "../Images/Maelstrom_Titles#999.bmp"; sourceTree = SOURCE_ROOT; };
+		04E1EF940D7B1ED000B4C82A /* Maelstrom-Scores */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Maelstrom-Scores"; path = "../Maelstrom-Scores"; sourceTree = SOURCE_ROOT; };
+		04E1EF950D7B1ED000B4C82A /* Maelstrom_Fonts */ = {isa = PBXFileReference; lastKnownFileType = file; name = Maelstrom_Fonts; path = ../Maelstrom_Fonts; sourceTree = SOURCE_ROOT; };
+		04E1EF960D7B1ED000B4C82A /* Maelstrom_Sounds */ = {isa = PBXFileReference; lastKnownFileType = file; name = Maelstrom_Sounds; path = ../Maelstrom_Sounds; sourceTree = SOURCE_ROOT; };
+		04E1EF970D7B1ED000B4C82A /* Maelstrom_Sprites */ = {isa = PBXFileReference; lastKnownFileType = file; name = Maelstrom_Sprites; path = ../Maelstrom_Sprites; sourceTree = SOURCE_ROOT; };
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		173670BB00AF295B7F000001 /* buttonlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = buttonlist.h; path = ../buttonlist.h; sourceTree = SOURCE_ROOT; };
+		173670BC00AF295B7F000001 /* checksum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = checksum.cpp; path = ../checksum.cpp; sourceTree = SOURCE_ROOT; };
+		173670BD00AF295B7F000001 /* checksum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = checksum.h; path = ../checksum.h; sourceTree = SOURCE_ROOT; };
+		173670BE00AF295B7F000001 /* colortable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = colortable.h; path = ../colortable.h; sourceTree = SOURCE_ROOT; };
+		173670BF00AF295B7F000001 /* controls.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = controls.cpp; path = ../controls.cpp; sourceTree = SOURCE_ROOT; };
+		173670C000AF295B7F000001 /* controls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = controls.h; path = ../controls.h; sourceTree = SOURCE_ROOT; };
+		173670C100AF295B7F000001 /* dialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = dialog.cpp; path = ../dialog.cpp; sourceTree = SOURCE_ROOT; };
+		173670C200AF295B7F000001 /* dialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = dialog.h; path = ../dialog.h; sourceTree = SOURCE_ROOT; };
+		173670CB00AF29927F000001 /* fastrand.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = fastrand.cpp; path = ../fastrand.cpp; sourceTree = SOURCE_ROOT; };
+		173670CC00AF29927F000001 /* fastrand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fastrand.h; path = ../fastrand.h; sourceTree = SOURCE_ROOT; };
+		173670CD00AF29927F000001 /* init.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = init.cpp; path = ../init.cpp; sourceTree = SOURCE_ROOT; };
+		173670CE00AF29927F000001 /* load.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = load.cpp; path = ../load.cpp; sourceTree = SOURCE_ROOT; };
+		173670CF00AF29927F000001 /* load.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = load.h; path = ../load.h; sourceTree = SOURCE_ROOT; };
+		173670D000AF29927F000001 /* logic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = logic.h; path = ../logic.h; sourceTree = SOURCE_ROOT; };
+		173670D100AF29927F000001 /* Maelstrom_Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Maelstrom_Globals.h; path = ../Maelstrom_Globals.h; sourceTree = SOURCE_ROOT; };
+		173670D300AF29927F000001 /* Maelstrom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Maelstrom.h; path = ../Maelstrom.h; sourceTree = SOURCE_ROOT; };
+		173670D400AF29927F000001 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../main.cpp; sourceTree = SOURCE_ROOT; };
+		173670D500AF29927F000001 /* myerror.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = myerror.cpp; path = ../myerror.cpp; sourceTree = SOURCE_ROOT; };
+		173670D600AF29927F000001 /* myerror.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = myerror.h; path = ../myerror.h; sourceTree = SOURCE_ROOT; };
+		173670D700AF29927F000001 /* public_key.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = public_key.h; path = ../public_key.h; sourceTree = SOURCE_ROOT; };
+		173670D800AF29927F000001 /* rect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = rect.cpp; path = ../rect.cpp; sourceTree = SOURCE_ROOT; };
+		173670D900AF29927F000001 /* rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = rect.h; path = ../rect.h; sourceTree = SOURCE_ROOT; };
+		173670DA00AF29927F000001 /* scores.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = scores.cpp; path = ../scores.cpp; sourceTree = SOURCE_ROOT; };
+		173670DB00AF29927F000001 /* scores.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = scores.h; path = ../scores.h; sourceTree = SOURCE_ROOT; };
+		1736710800AF2A6D7F000001 /* pixel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = pixel.cpp; sourceTree = "<group>"; };
+		1736710900AF2A6D7F000001 /* pixel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pixel.h; sourceTree = "<group>"; };
+		1736710B00AF2A6D7F000001 /* SDL_FrameBuf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SDL_FrameBuf.cpp; sourceTree = "<group>"; };
+		1736710C00AF2A6D7F000001 /* SDL_FrameBuf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDL_FrameBuf.h; sourceTree = "<group>"; };
+		1736711500AF2C257F000001 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = file; path = config.h; sourceTree = "<group>"; };
+		1736711800AF2C7D7F000001 /* applefile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = applefile.h; sourceTree = "<group>"; };
+		1736711900AF2C7D7F000001 /* bitesex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bitesex.h; sourceTree = "<group>"; };
+		1736711B00AF2C7D7F000001 /* Mac_Compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mac_Compat.h; sourceTree = "<group>"; };
+		1736711C00AF2C7D7F000001 /* Mac_FontServ.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mac_FontServ.cpp; sourceTree = "<group>"; };
+		1736711D00AF2C7D7F000001 /* Mac_FontServ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mac_FontServ.h; sourceTree = "<group>"; };
+		1736711E00AF2C7D7F000001 /* Mac_Resource.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mac_Resource.cpp; sourceTree = "<group>"; };
+		1736711F00AF2C7D7F000001 /* Mac_Resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mac_Resource.h; sourceTree = "<group>"; };
+		1736712000AF2C7D7F000001 /* Mac_Sound.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mac_Sound.cpp; sourceTree = "<group>"; };
+		1736712100AF2C7D7F000001 /* Mac_Sound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mac_Sound.h; sourceTree = "<group>"; };
+		1736712200AF2C7D7F000001 /* Mac_Wave.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mac_Wave.cpp; sourceTree = "<group>"; };
+		1736712300AF2C7D7F000001 /* Mac_Wave.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mac_Wave.h; sourceTree = "<group>"; };
+		1736716500B03D357F000001 /* Maelstrom_Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Maelstrom_Server; sourceTree = BUILT_PRODUCTS_DIR; };
+		1736716C00B03F027F000001 /* Maelstrom-netd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "Maelstrom-netd.c"; path = "../Maelstrom-netd.c"; sourceTree = SOURCE_ROOT; };
+		17587328FF379C6511CA2CBB /* Maelstrom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Maelstrom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		F5709022010A768101000001 /* Maelstrom.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Maelstrom.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1736716900B03D367F000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29B9732DFDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				042E4A880D7B1913008E6CEB /* SDL.framework in Frameworks */,
+				042E4A8C0D7B191E008E6CEB /* SDL_mixer.framework in Frameworks */,
+				042E4A900D7B192E008E6CEB /* SDL_net.framework in Frameworks */,
+				042E4A980D7B19D5008E6CEB /* AudioUnit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00FF5C4900B0464B7F000001 /* netlogic */ = {
+			isa = PBXGroup;
+			children = (
+				00FF5C4A00B0464B7F000001 /* about.cpp */,
+				00FF5C4B00B0464B7F000001 /* blit.cpp */,
+				00FF5C4C00B0464B7F000001 /* game.cpp */,
+				00FF5C4D00B0464B7F000001 /* globals.h */,
+				00FF5C4E00B0464B7F000001 /* logic.cpp */,
+				00FF5C4F00B0464B7F000001 /* make.cpp */,
+				00FF5C5000B0464B7F000001 /* make.h */,
+				00FF5C5100B0464B7F000001 /* netlogic.h */,
+				00FF5C5200B0464B7F000001 /* netplay.cpp */,
+				00FF5C5300B0464B7F000001 /* netplay.h */,
+				00FF5C5400B0464B7F000001 /* object.cpp */,
+				00FF5C5500B0464B7F000001 /* object.h */,
+				00F8BA57010A53097F000001 /* objects.cpp */,
+				00FF5C5600B0464B7F000001 /* objects.h */,
+				00FF5C5700B0464B7F000001 /* player.cpp */,
+				00FF5C5800B0464B7F000001 /* player.h */,
+				00FF5C5900B0464B7F000001 /* protocol.h */,
+				00FF5C5A00B0464B7F000001 /* shinobi.h */,
+			);
+			name = netlogic;
+			path = ../netlogic;
+			sourceTree = SOURCE_ROOT;
+		};
+		049E9F5D0D7B20BD001F3564 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				049E9F5E0D7B20DA001F3564 /* Maelstrom_Icon#100.cicn */,
+				049E9F5F0D7B20DA001F3564 /* Maelstrom_Icon#101.cicn */,
+				049E9F600D7B20DA001F3564 /* Maelstrom_Icon#102.cicn */,
+				049E9F610D7B20DA001F3564 /* Maelstrom_Icon#103.cicn */,
+				049E9F620D7B20DA001F3564 /* Maelstrom_Icon#104.cicn */,
+				049E9F630D7B20DA001F3564 /* Maelstrom_Icon#110.cicn */,
+				049E9F640D7B20DA001F3564 /* Maelstrom_Icon#128.cicn */,
+				049E9F650D7B20DA001F3564 /* Maelstrom_Icon#129.cicn */,
+				049E9F660D7B20DA001F3564 /* Maelstrom_Icon#130.cicn */,
+				049E9F670D7B20DA001F3564 /* Maelstrom_Icon#131.cicn */,
+				049E9F680D7B20DA001F3564 /* Maelstrom_Icon#132.cicn */,
+				049E9F690D7B20DA001F3564 /* Maelstrom_Icon#133.cicn */,
+				049E9F6A0D7B20DA001F3564 /* Maelstrom_Icon#134.cicn */,
+				049E9F6B0D7B20DA001F3564 /* Maelstrom_Icon#135.cicn */,
+				049E9F6C0D7B20DA001F3564 /* Maelstrom_Icon#136.cicn */,
+				049E9F6D0D7B20DA001F3564 /* Maelstrom_Icon#137.cicn */,
+				049E9F6E0D7B20DA001F3564 /* Maelstrom_Titles#100.bmp */,
+				049E9F6F0D7B20DA001F3564 /* Maelstrom_Titles#101.bmp */,
+				049E9F700D7B20DA001F3564 /* Maelstrom_Titles#102.bmp */,
+				049E9F710D7B20DA001F3564 /* Maelstrom_Titles#128.bmp */,
+				049E9F720D7B20DA001F3564 /* Maelstrom_Titles#129.bmp */,
+				049E9F730D7B20DA001F3564 /* Maelstrom_Titles#130.bmp */,
+				049E9F740D7B20DA001F3564 /* Maelstrom_Titles#133.bmp */,
+				049E9F750D7B20DA001F3564 /* Maelstrom_Titles#134.bmp */,
+				049E9F760D7B20DA001F3564 /* Maelstrom_Titles#135.bmp */,
+				049E9F770D7B20DA001F3564 /* Maelstrom_Titles#999.bmp */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				00F9DA4F00AC72F57F000001 /* SDLMain.h */,
+				00F9DA5100AC730E7F000001 /* SDLMain.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				042E4A970D7B19D5008E6CEB /* AudioUnit.framework */,
+				042E4A8F0D7B192E008E6CEB /* SDL_net.framework */,
+				042E4A8B0D7B191E008E6CEB /* SDL_mixer.framework */,
+				042E4A870D7B1913008E6CEB /* SDL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		173670BA00AF294B7F000001 /* Maelstrom Sources */ = {
+			isa = PBXGroup;
+			children = (
+				173670BB00AF295B7F000001 /* buttonlist.h */,
+				173670BC00AF295B7F000001 /* checksum.cpp */,
+				173670BD00AF295B7F000001 /* checksum.h */,
+				173670BE00AF295B7F000001 /* colortable.h */,
+				173670BF00AF295B7F000001 /* controls.cpp */,
+				173670C000AF295B7F000001 /* controls.h */,
+				173670C100AF295B7F000001 /* dialog.cpp */,
+				173670C200AF295B7F000001 /* dialog.h */,
+				173670CB00AF29927F000001 /* fastrand.cpp */,
+				173670CC00AF29927F000001 /* fastrand.h */,
+				173670CD00AF29927F000001 /* init.cpp */,
+				173670CE00AF29927F000001 /* load.cpp */,
+				173670CF00AF29927F000001 /* load.h */,
+				173670D000AF29927F000001 /* logic.h */,
+				173670D100AF29927F000001 /* Maelstrom_Globals.h */,
+				173670D300AF29927F000001 /* Maelstrom.h */,
+				173670D400AF29927F000001 /* main.cpp */,
+				173670D500AF29927F000001 /* myerror.cpp */,
+				173670D600AF29927F000001 /* myerror.h */,
+				0104628800B326437F000001 /* netscore.cpp */,
+				173670D700AF29927F000001 /* public_key.h */,
+				173670D800AF29927F000001 /* rect.cpp */,
+				173670D900AF29927F000001 /* rect.h */,
+				173670DA00AF29927F000001 /* scores.cpp */,
+				173670DB00AF29927F000001 /* scores.h */,
+				00FF5C4900B0464B7F000001 /* netlogic */,
+				1736711700AF2C7D7F000001 /* maclib */,
+				1736710400AF2A6D7F000001 /* screenlib */,
+			);
+			name = "Maelstrom Sources";
+			sourceTree = "<group>";
+		};
+		1736710400AF2A6D7F000001 /* screenlib */ = {
+			isa = PBXGroup;
+			children = (
+				1736710800AF2A6D7F000001 /* pixel.cpp */,
+				1736710900AF2A6D7F000001 /* pixel.h */,
+				1736710B00AF2A6D7F000001 /* SDL_FrameBuf.cpp */,
+				1736710C00AF2A6D7F000001 /* SDL_FrameBuf.h */,
+			);
+			name = screenlib;
+			path = ../screenlib;
+			sourceTree = SOURCE_ROOT;
+		};
+		1736711700AF2C7D7F000001 /* maclib */ = {
+			isa = PBXGroup;
+			children = (
+				1736711800AF2C7D7F000001 /* applefile.h */,
+				1736711900AF2C7D7F000001 /* bitesex.h */,
+				1736711B00AF2C7D7F000001 /* Mac_Compat.h */,
+				1736711C00AF2C7D7F000001 /* Mac_FontServ.cpp */,
+				1736711D00AF2C7D7F000001 /* Mac_FontServ.h */,
+				1736711E00AF2C7D7F000001 /* Mac_Resource.cpp */,
+				1736711F00AF2C7D7F000001 /* Mac_Resource.h */,
+				1736712000AF2C7D7F000001 /* Mac_Sound.cpp */,
+				1736712100AF2C7D7F000001 /* Mac_Sound.h */,
+				1736712200AF2C7D7F000001 /* Mac_Wave.cpp */,
+				1736712300AF2C7D7F000001 /* Mac_Wave.h */,
+			);
+			name = maclib;
+			path = ../maclib;
+			sourceTree = SOURCE_ROOT;
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17587328FF379C6511CA2CBB /* Maelstrom.app */,
+				1736716500B03D357F000001 /* Maelstrom_Server */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* SDL Application */ = {
+			isa = PBXGroup;
+			children = (
+				173670BA00AF294B7F000001 /* Maelstrom Sources */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				1736716C00B03F027F000001 /* Maelstrom-netd.c */,
+			);
+			name = "SDL Application";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1736711500AF2C257F000001 /* config.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				049E9F5D0D7B20BD001F3564 /* Images */,
+				041594610D7B1F86006B25AD /* icon.bmp */,
+				04E1EF940D7B1ED000B4C82A /* Maelstrom-Scores */,
+				04E1EF950D7B1ED000B4C82A /* Maelstrom_Fonts */,
+				04E1EF960D7B1ED000B4C82A /* Maelstrom_Sounds */,
+				04E1EF970D7B1ED000B4C82A /* Maelstrom_Sprites */,
+				F5709022010A768101000001 /* Maelstrom.icns */,
+				00F9DA5400AC763A7F000001 /* SDLMain.nib */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1736716700B03D367F000001 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00FF5C6C00B0464B7F000001 /* protocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29B97327FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00F9DA5000AC72F57F000001 /* SDLMain.h in Headers */,
+				173670C300AF295B7F000001 /* buttonlist.h in Headers */,
+				173670C400AF295B7F000001 /* checksum.h in Headers */,
+				173670C500AF295B7F000001 /* colortable.h in Headers */,
+				173670C600AF295B7F000001 /* controls.h in Headers */,
+				173670C700AF295B7F000001 /* dialog.h in Headers */,
+				173670DC00AF29927F000001 /* fastrand.h in Headers */,
+				173670DD00AF29927F000001 /* load.h in Headers */,
+				173670DE00AF29927F000001 /* logic.h in Headers */,
+				173670DF00AF29927F000001 /* Maelstrom_Globals.h in Headers */,
+				173670E000AF29927F000001 /* Maelstrom.h in Headers */,
+				173670E100AF29927F000001 /* myerror.h in Headers */,
+				173670E200AF29927F000001 /* public_key.h in Headers */,
+				173670E300AF29927F000001 /* rect.h in Headers */,
+				173670E400AF29927F000001 /* scores.h in Headers */,
+				1736710D00AF2A6D7F000001 /* pixel.h in Headers */,
+				1736710E00AF2A6D7F000001 /* SDL_FrameBuf.h in Headers */,
+				1736712A00AF2C7D7F000001 /* applefile.h in Headers */,
+				1736712B00AF2C7D7F000001 /* bitesex.h in Headers */,
+				1736712C00AF2C7D7F000001 /* Mac_Compat.h in Headers */,
+				1736712D00AF2C7D7F000001 /* Mac_FontServ.h in Headers */,
+				1736712E00AF2C7D7F000001 /* Mac_Resource.h in Headers */,
+				1736712F00AF2C7D7F000001 /* Mac_Sound.h in Headers */,
+				1736713000AF2C7D7F000001 /* Mac_Wave.h in Headers */,
+				00FF5C5B00B0464B7F000001 /* globals.h in Headers */,
+				00FF5C5C00B0464B7F000001 /* make.h in Headers */,
+				00FF5C5D00B0464B7F000001 /* netlogic.h in Headers */,
+				00FF5C5E00B0464B7F000001 /* netplay.h in Headers */,
+				00FF5C5F00B0464B7F000001 /* object.h in Headers */,
+				00FF5C6000B0464B7F000001 /* objects.h in Headers */,
+				00FF5C6100B0464B7F000001 /* player.h in Headers */,
+				00FF5C6200B0464B7F000001 /* protocol.h in Headers */,
+				00FF5C6300B0464B7F000001 /* shinobi.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 042E4A730D7B17DB008E6CEB /* Build configuration list for PBXProject "Maelstrom" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 0;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* SDL Application */;
+			projectDirPath = "";
+			projectRoot = ..;
+			targets = (
+				29B97326FDCFA39411CA2CEA /* Maelstrom */,
+				1736716600B03D367F000001 /* Maelstrom Server */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29B97328FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
+				00F9DA5500AC763A7F000001 /* SDLMain.nib in Resources */,
+				F5709023010A768101000001 /* Maelstrom.icns in Resources */,
+				04E1EF980D7B1ED000B4C82A /* Maelstrom-Scores in Resources */,
+				04E1EF990D7B1ED000B4C82A /* Maelstrom_Fonts in Resources */,
+				04E1EF9A0D7B1ED000B4C82A /* Maelstrom_Sounds in Resources */,
+				04E1EF9B0D7B1ED000B4C82A /* Maelstrom_Sprites in Resources */,
+				041594620D7B1F86006B25AD /* icon.bmp in Resources */,
+				049E9F780D7B20DA001F3564 /* Maelstrom_Icon#100.cicn in Resources */,
+				049E9F790D7B20DA001F3564 /* Maelstrom_Icon#101.cicn in Resources */,
+				049E9F7A0D7B20DA001F3564 /* Maelstrom_Icon#102.cicn in Resources */,
+				049E9F7B0D7B20DA001F3564 /* Maelstrom_Icon#103.cicn in Resources */,
+				049E9F7C0D7B20DA001F3564 /* Maelstrom_Icon#104.cicn in Resources */,
+				049E9F7D0D7B20DA001F3564 /* Maelstrom_Icon#110.cicn in Resources */,
+				049E9F7E0D7B20DA001F3564 /* Maelstrom_Icon#128.cicn in Resources */,
+				049E9F7F0D7B20DA001F3564 /* Maelstrom_Icon#129.cicn in Resources */,
+				049E9F800D7B20DA001F3564 /* Maelstrom_Icon#130.cicn in Resources */,
+				049E9F810D7B20DA001F3564 /* Maelstrom_Icon#131.cicn in Resources */,
+				049E9F820D7B20DA001F3564 /* Maelstrom_Icon#132.cicn in Resources */,
+				049E9F830D7B20DA001F3564 /* Maelstrom_Icon#133.cicn in Resources */,
+				049E9F840D7B20DA001F3564 /* Maelstrom_Icon#134.cicn in Resources */,
+				049E9F850D7B20DA001F3564 /* Maelstrom_Icon#135.cicn in Resources */,
+				049E9F860D7B20DA001F3564 /* Maelstrom_Icon#136.cicn in Resources */,
+				049E9F870D7B20DA001F3564 /* Maelstrom_Icon#137.cicn in Resources */,
+				049E9F880D7B20DA001F3564 /* Maelstrom_Titles#100.bmp in Resources */,
+				049E9F890D7B20DA001F3564 /* Maelstrom_Titles#101.bmp in Resources */,
+				049E9F8A0D7B20DA001F3564 /* Maelstrom_Titles#102.bmp in Resources */,
+				049E9F8B0D7B20DA001F3564 /* Maelstrom_Titles#128.bmp in Resources */,
+				049E9F8C0D7B20DA001F3564 /* Maelstrom_Titles#129.bmp in Resources */,
+				049E9F8D0D7B20DA001F3564 /* Maelstrom_Titles#130.bmp in Resources */,
+				049E9F8E0D7B20DA001F3564 /* Maelstrom_Titles#133.bmp in Resources */,
+				049E9F8F0D7B20DA001F3564 /* Maelstrom_Titles#134.bmp in Resources */,
+				049E9F900D7B20DA001F3564 /* Maelstrom_Titles#135.bmp in Resources */,
+				049E9F910D7B20DA001F3564 /* Maelstrom_Titles#999.bmp in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		043355C9FE30361CC02AAC07 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1736716A00B03D367F000001 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F52890EE00C16E5C01000001 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "exit 0\nLOCATION=build/Maelstrom.app/Contents/Resources/\ncp -r ../Images $LOCATION\ncp -r ../Maelstrom_Fonts $LOCATION\ncp -r ../Maelstrom_Sounds $LOCATION\ncp -r ../Maelstrom_Sprites $LOCATION\ncp -r ../Maelstrom-Scores $LOCATION\ncp -r ../icon.bmp $LOCATION\ncp -r build/Maelstrom_Server $LOCATION";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1736716800B03D367F000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1736716E00B03F027F000001 /* Maelstrom-netd.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29B9732BFDCFA39411CA2CEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00F9DA5200AC730E7F000001 /* SDLMain.m in Sources */,
+				173670C800AF295B7F000001 /* checksum.cpp in Sources */,
+				173670C900AF295B7F000001 /* controls.cpp in Sources */,
+				173670CA00AF295B7F000001 /* dialog.cpp in Sources */,
+				173670E500AF29927F000001 /* fastrand.cpp in Sources */,
+				173670E600AF29927F000001 /* init.cpp in Sources */,
+				173670E700AF29927F000001 /* load.cpp in Sources */,
+				173670E900AF29927F000001 /* main.cpp in Sources */,
+				173670EA00AF29927F000001 /* myerror.cpp in Sources */,
+				173670EB00AF29927F000001 /* rect.cpp in Sources */,
+				173670EC00AF29927F000001 /* scores.cpp in Sources */,
+				1736711300AF2A6D7F000001 /* pixel.cpp in Sources */,
+				1736711400AF2A6D7F000001 /* SDL_FrameBuf.cpp in Sources */,
+				1736713500AF2C7D7F000001 /* Mac_FontServ.cpp in Sources */,
+				1736713600AF2C7D7F000001 /* Mac_Resource.cpp in Sources */,
+				1736713700AF2C7D7F000001 /* Mac_Sound.cpp in Sources */,
+				1736713800AF2C7D7F000001 /* Mac_Wave.cpp in Sources */,
+				00FF5C6400B0464B7F000001 /* about.cpp in Sources */,
+				00FF5C6500B0464B7F000001 /* blit.cpp in Sources */,
+				00FF5C6600B0464B7F000001 /* game.cpp in Sources */,
+				00FF5C6700B0464B7F000001 /* logic.cpp in Sources */,
+				00FF5C6800B0464B7F000001 /* make.cpp in Sources */,
+				00FF5C6900B0464B7F000001 /* netplay.cpp in Sources */,
+				00FF5C6A00B0464B7F000001 /* object.cpp in Sources */,
+				00FF5C6B00B0464B7F000001 /* player.cpp in Sources */,
+				0104628900B326437F000001 /* netscore.cpp in Sources */,
+				00F8BA58010A53097F000001 /* objects.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F52890F200C1A31301000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1736716600B03D367F000001 /* Maelstrom Server */;
+			targetProxy = 042E4A610D7B17D8008E6CEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXToolTarget section */
+		1736716600B03D367F000001 /* Maelstrom Server */ = {
+			isa = PBXToolTarget;
+			buildConfigurationList = 042E4A740D7B17DB008E6CEB /* Build configuration list for PBXToolTarget "Maelstrom Server" */;
+			buildPhases = (
+				1736716700B03D367F000001 /* Headers */,
+				1736716800B03D367F000001 /* Sources */,
+				1736716900B03D367F000001 /* Frameworks */,
+				1736716A00B03D367F000001 /* Rez */,
+			);
+			dependencies = (
+			);
+			name = "Maelstrom Server";
+			productInstallPath = /usr/local/bin;
+			productName = "Maelstrom Server";
+			productReference = 1736716500B03D357F000001 /* Maelstrom_Server */;
+		};
+/* End PBXToolTarget section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		042E4A6A0D7B17DB008E6CEB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		042E4A6B0D7B17DB008E6CEB /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		042E4A6C0D7B17DB008E6CEB /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+		042E4A6D0D7B17DB008E6CEB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(HOME)/Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/SDL.framework/Headers",
+					"$(HOME)/Library/Frameworks/SDL_net.framework/Headers",
+				);
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_LDFLAGS = (
+					"-framework",
+					OpenGL,
+					"-framework",
+					AGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					Cocoa,
+					"-framework",
+					Carbon,
+					"-framework",
+					QuickTime,
+				);
+				PRODUCT_NAME = Maelstrom;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		042E4A6E0D7B17DB008E6CEB /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUGGING_SYMBOLS = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(HOME)/Library/Frameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/SDL.framework/Headers",
+					"$(HOME)/Library/Frameworks/SDL_net.framework/Headers",
+				);
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O3";
+				OTHER_LDFLAGS = (
+					"-framework",
+					OpenGL,
+					"-framework",
+					AGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					Cocoa,
+					"-framework",
+					Carbon,
+					"-framework",
+					QuickTime,
+				);
+				PRODUCT_NAME = Maelstrom;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		042E4A6F0D7B17DB008E6CEB /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "\"$(HOME)/Library/Frameworks\"";
+				HEADER_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/SDL.framework/Headers",
+					"$(HOME)/Library/Frameworks/SDL_net.framework/Headers",
+				);
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O3";
+				OTHER_LDFLAGS = (
+					"-framework",
+					OpenGL,
+					"-framework",
+					AGL,
+					"-framework",
+					IOKit,
+					"-framework",
+					Cocoa,
+					"-framework",
+					Carbon,
+					"-framework",
+					QuickTime,
+				);
+				PRODUCT_NAME = Maelstrom;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		042E4A700D7B17DB008E6CEB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Maelstrom_Server;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		042E4A710D7B17DB008E6CEB /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUGGING_SYMBOLS = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OPTIMIZATION_CFLAGS = "-O3";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Maelstrom_Server;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		042E4A720D7B17DB008E6CEB /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = NO;
+				OPTIMIZATION_CFLAGS = "-O3";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Maelstrom_Server;
+				REZ_EXECUTABLE = YES;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		042E4A730D7B17DB008E6CEB /* Build configuration list for PBXProject "Maelstrom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042E4A6A0D7B17DB008E6CEB /* Development */,
+				042E4A6B0D7B17DB008E6CEB /* Deployment */,
+				042E4A6C0D7B17DB008E6CEB /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		042E4A740D7B17DB008E6CEB /* Build configuration list for PBXToolTarget "Maelstrom Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042E4A700D7B17DB008E6CEB /* Development */,
+				042E4A710D7B17DB008E6CEB /* Deployment */,
+				042E4A720D7B17DB008E6CEB /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		042E4A750D7B17DB008E6CEB /* Build configuration list for PBXApplicationTarget "Maelstrom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042E4A6D0D7B17DB008E6CEB /* Development */,
+				042E4A6E0D7B17DB008E6CEB /* Deployment */,
+				042E4A6F0D7B17DB008E6CEB /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -32,7 +32,8 @@ Uint8 gGammaCorrect = 3;
 /* Map a keycode to a key name */
 void KeyName(SDLKey keycode, char *namebuf)
 {
-	char *name, ch;
+	const char *name;
+	char ch;
 	int starting;
 
 	/* Get the name of the key */

@@ -53,6 +53,10 @@ static inline char *strdup(const char *str)
 #endif
 #endif /* !defined(LIBDIR) */
 
+#ifndef IMAGEDIR
+#define IMAGEDIR "Images"DIR_SEP
+#endif
+
 class LibPath {
 
 private:

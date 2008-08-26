@@ -1,6 +1,7 @@
 
 /* Here we go... */
 
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <signal.h>
@@ -51,7 +52,7 @@ void DisconnectPlayer(int which)
 printf("Player on slot %d has been disconnected.\n", which);
 }
 
-void SendError(int which, char *message)
+void SendError(int which, const char *message)
 {
 	unsigned char mesgbuf[BUFSIZ];
 	int mesglen;
@@ -71,7 +72,7 @@ printf("Sending error '%s' to player in slot %d\n", message, which);
 }
 
 /* Uh oh, a fatal error.  Tell all currently connected players, and exit. */
-void Fatal(char *message)
+void Fatal(const char *message)
 {
 	int i;
 
@@ -124,10 +125,11 @@ void CheckNewGame(void)
 		if ( players[i].state != ACTIVE )
 			continue;
 		if ( players[i].numplayers != numplayers ) {
-			sprintf(buffer,
+			char message[BUFSIZ];
+			sprintf(message,
 				"There are %d, not %d players in this game",
 					numplayers, players[i].numplayers);
-			SendError(i, (char *)buffer);
+			SendError(i, buffer);
 		}
 	}
 

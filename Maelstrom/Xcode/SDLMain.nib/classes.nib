@@ -1,0 +1,30 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                cancel = id; 
+                quit = id; 
+                startGame = id; 
+                startServer = id; 
+                toggleFullscreen = id; 
+            }; 
+            CLASS = SDLMain; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                fragCount = id; 
+                fullscreen = id; 
+                joinGame = id; 
+                netAddress = id; 
+                numberOfPlayers = id; 
+                playDeathmatch = id; 
+                playerNumber = id; 
+                realtime = id; 
+                window = id; 
+                worldScores = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
