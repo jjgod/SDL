@@ -6,6 +6,8 @@
 #include "globals.h"
 #include "objects.h"
 
+// Define this to be invincible
+//#define KID_MODE
 
 /* ----------------------------------------------------------------- */
 /* -- The thrust sound callback */
@@ -159,6 +161,9 @@ Player::IncrLives(int lives)
 int
 Player::BeenShot(Object *ship, Shot *shot)
 {
+#ifdef KID_MODE
+	return(0);
+#else
 	if ( Exploding || !Alive() )
 		return(0);
 	if ( AutoShield || (ShieldOn && (ShieldLevel > 0)) )
@@ -168,11 +173,15 @@ Player::BeenShot(Object *ship, Shot *shot)
 		return(0);
 	}
 	return(Object::BeenShot(ship, shot));
+#endif
 }
 
 /* We've been run over!  (returns 1 if we are dead) */
 int
 Player::BeenRunOver(Object *ship) {
+#ifdef KID_MODE
+	return(0);
+#else
 	if ( Exploding || !Alive() )
 		return(0);
 	if ( AutoShield || (ShieldOn && (ShieldLevel > 0)) )
@@ -184,12 +193,16 @@ Player::BeenRunOver(Object *ship) {
 		return(0);
 	}
 	return(Object::BeenRunOver(ship));
+#endif
 }
 
 /* We've been run over by a rock or something */
 int
 Player::BeenDamaged(int damage)
 {
+#ifdef KID_MODE
+	return(0);
+#else
 	if ( Exploding || !Alive() )
 		return(0);
 	if ( AutoShield || (ShieldOn && (ShieldLevel > 0)) )
@@ -199,6 +212,7 @@ Player::BeenDamaged(int damage)
 		return(0);
 	}
 	return(Object::BeenDamaged(damage));
+#endif
 }
 
 /* We expired (returns -1 if our sprite should be deleted) */
